@@ -13,6 +13,8 @@ class MutantCell: BaseCell {
     weak var mutant: Mutant? {
         didSet {
             descriptionTextView.attributedText = mutant?.attributedDescriptionText()
+            
+            profileImageView.image = UIImage(named: mutant!.name!.lowercaseString)
         }
     }
     
@@ -23,6 +25,7 @@ class MutantCell: BaseCell {
     }
 
     @IBOutlet private weak var descriptionTextView: UITextView!
+    @IBOutlet private weak var profileImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,6 +33,9 @@ class MutantCell: BaseCell {
         descriptionTextView.scrollEnabled = false
         descriptionTextView.userInteractionEnabled = false
         descriptionTextView.backgroundColor = UIColor.clearColor()
+        
+        profileImageView.contentMode = .ScaleAspectFill
+        profileImageView.clipsToBounds = true
         
         addBottomSeparatorView()
     }

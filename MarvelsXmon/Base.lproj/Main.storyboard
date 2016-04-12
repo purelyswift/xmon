@@ -28,7 +28,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Fe-vc-OK3">
-                                            <rect key="frame" x="0.0" y="0.0" width="362" height="89"/>
+                                            <rect key="frame" x="96" y="0.0" width="266" height="89"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <string key="text">Mutant Name - Human Name
 
@@ -36,17 +36,33 @@ Character Overview</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tYE-RX-CCp">
+                                            <rect key="frame" x="8" y="8" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="LIC-4D-vQs"/>
+                                                <constraint firstAttribute="height" constant="80" id="V8h-BF-1TE"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="3Fe-vc-OK3" firstAttribute="top" secondItem="oKi-v1-dJp" secondAttribute="topMargin" constant="-8" id="1m3-Db-XDP"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="3Fe-vc-OK3" secondAttribute="trailing" constant="-8" id="4RX-NV-DFY"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="3Fe-vc-OK3" secondAttribute="bottom" constant="-8" id="NUX-7E-Eoh"/>
-                                    <constraint firstItem="3Fe-vc-OK3" firstAttribute="leading" secondItem="oKi-v1-dJp" secondAttribute="leadingMargin" constant="-8" id="g86-6t-hFz"/>
+                                    <constraint firstItem="3Fe-vc-OK3" firstAttribute="top" secondItem="oKi-v1-dJp" secondAttribute="topMargin" constant="-8" id="Oma-dg-Jhh"/>
+                                    <constraint firstItem="tYE-RX-CCp" firstAttribute="leading" secondItem="oKi-v1-dJp" secondAttribute="leadingMargin" id="W1n-rB-PXr"/>
+                                    <constraint firstItem="tYE-RX-CCp" firstAttribute="top" secondItem="oKi-v1-dJp" secondAttribute="topMargin" constant="8" id="WUt-Pe-sPV"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="3Fe-vc-OK3" secondAttribute="bottom" constant="-8" id="jSp-Bx-F1Y"/>
+                                    <constraint firstItem="3Fe-vc-OK3" firstAttribute="leading" secondItem="tYE-RX-CCp" secondAttribute="trailing" constant="8" id="lDQ-zH-8bh"/>
+                                    <constraint firstItem="tYE-RX-CCp" firstAttribute="top" secondItem="oKi-v1-dJp" secondAttribute="topMargin" id="lX2-F2-Tyy"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="3Fe-vc-OK3" secondAttribute="trailing" constant="-8" id="p3D-Uf-4ng"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WUt-Pe-sPV"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="descriptionTextView" destination="3Fe-vc-OK3" id="840-nG-EEQ"/>
+                                    <outlet property="profileImageView" destination="tYE-RX-CCp" id="g82-8V-OVO"/>
                                     <segue destination="hbD-mG-j3H" kind="show" id="V57-Oz-Fqt"/>
                                 </connections>
                             </collectionViewCell>
@@ -84,7 +100,7 @@ Character Overview</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjA-uh-S6y">
-                                            <rect key="frame" x="0.0" y="0.0" width="328" height="65"/>
+                                            <rect key="frame" x="8" y="0.0" width="320" height="65"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -94,7 +110,7 @@ Character Overview</string>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="trailingMargin" secondItem="zjA-uh-S6y" secondAttribute="trailing" constant="-8" id="3o5-ZR-pla"/>
-                                    <constraint firstItem="zjA-uh-S6y" firstAttribute="leading" secondItem="8X7-v0-RhK" secondAttribute="leadingMargin" constant="-8" id="VRv-bz-GbV"/>
+                                    <constraint firstItem="zjA-uh-S6y" firstAttribute="leading" secondItem="8X7-v0-RhK" secondAttribute="leadingMargin" id="VRv-bz-GbV"/>
                                     <constraint firstItem="zjA-uh-S6y" firstAttribute="top" secondItem="8X7-v0-RhK" secondAttribute="topMargin" constant="-8" id="r5e-lw-8ZU"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="zjA-uh-S6y" secondAttribute="bottom" constant="-8" id="xCe-1X-AAt"/>
                                 </constraints>

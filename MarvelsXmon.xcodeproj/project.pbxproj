@@ -22,6 +22,7 @@
 		C7154D191CBD507D00877DD2 /* PowersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7154D181CBD507D00877DD2 /* PowersController.swift */; };
 		C7154D1B1CBD555700877DD2 /* PowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7154D1A1CBD555700877DD2 /* PowerCell.swift */; };
 		C7154D1D1CBD563C00877DD2 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7154D1C1CBD563C00877DD2 /* BaseCell.swift */; };
+		C7154D1F1CBD6A2800877DD2 /* EditPowersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7154D1E1CBD6A2800877DD2 /* EditPowersController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		C7154D181CBD507D00877DD2 /* PowersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowersController.swift; sourceTree = "<group>"; };
 		C7154D1A1CBD555700877DD2 /* PowerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerCell.swift; sourceTree = "<group>"; };
 		C7154D1C1CBD563C00877DD2 /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		C7154D1E1CBD6A2800877DD2 /* EditPowersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPowersController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			children = (
 				C7154CF51CBD3EA100877DD2 /* MutantsController.swift */,
 				C7154D181CBD507D00877DD2 /* PowersController.swift */,
+				C7154D1E1CBD6A2800877DD2 /* EditPowersController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7154D1F1CBD6A2800877DD2 /* EditPowersController.swift in Sources */,
 				C7154D0C1CBD3ECB00877DD2 /* Mutant.swift in Sources */,
 				C7154D141CBD4BD900877DD2 /* Power+CoreDataProperties.swift in Sources */,
 				C7154CF61CBD3EA100877DD2 /* MutantsController.swift in Sources */,

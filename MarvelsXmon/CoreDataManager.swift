@@ -54,9 +54,14 @@ class CoreDataManager: NSObject {
             wolverine.name = "Wolverine"
             wolverine.humanName = "Logan (James Howlett)"
             wolverine.characterOverview = "Wolverine is one of the main characters of Marvel's X-Men series.  His character has powers that allow him to rejuvenate unlike any other mutant.  Oh yeah he has claws too."
+            
             let rejuvenation = NSEntityDescription.insertNewObjectForEntityForName("Power", inManagedObjectContext: context) as! Power
             rejuvenation.name = "Rejuvenation"
-            wolverine.powers = NSSet(objects: rejuvenation)
+            
+            let claws = NSEntityDescription.insertNewObjectForEntityForName("Power", inManagedObjectContext: context) as! Power
+            claws.name = "Adamantium Claws"
+            
+            wolverine.powers = NSSet(objects: rejuvenation, claws)
             
             let professorX = NSEntityDescription.insertNewObjectForEntityForName("Mutant", inManagedObjectContext: context) as! Mutant
             professorX.name = "Professor X"
@@ -68,7 +73,6 @@ class CoreDataManager: NSObject {
             
             do {
                 try context.save()
-                
             } catch let err {
                 print(err)
             }
@@ -79,6 +83,7 @@ class CoreDataManager: NSObject {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context = appDelegate.managedObjectContext
         let request = NSFetchRequest(entityName: "Mutant")
+        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         do {
             return try context.executeFetchRequest(request) as? [Mutant]
         } catch let err {

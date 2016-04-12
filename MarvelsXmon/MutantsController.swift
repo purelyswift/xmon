@@ -14,13 +14,19 @@ class MutantsController: UICollectionViewController, UICollectionViewDelegateFlo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-                    CoreDataManager.sharedInstance.setupCoreData()
+        
+        fetchMutants()
+        setupControllerProperties()
+    }
+    
+    private func fetchMutants() {
         mutants = CoreDataManager.sharedInstance.fetchMutants()
         if mutants?.count == 0 {
-//            CoreDataManager.sharedInstance.setupCoreData()
+            CoreDataManager.sharedInstance.setupCoreData()
         }
-        
+    }
+    
+    private func setupControllerProperties() {
         navigationItem.title = "Oh My Mutants"
         
         collectionView?.backgroundColor = UIColor.whiteColor()
@@ -47,7 +53,7 @@ class MutantsController: UICollectionViewController, UICollectionViewDelegateFlo
         
         if let mutant = mutants?[indexPath.item] {
             let attributedText = mutant.attributedDescriptionText()
-            let rect = attributedText.boundingRectWithSize(CGSizeMake(view.frame.width - 16, 1000), options: NSStringDrawingOptions.UsesFontLeading.union(NSStringDrawingOptions.UsesLineFragmentOrigin), context: nil)
+            let rect = attributedText.boundingRectWithSize(CGSizeMake(view.frame.width - 16 - 88, 1000), options: NSStringDrawingOptions.UsesFontLeading.union(NSStringDrawingOptions.UsesLineFragmentOrigin), context: nil)
             return CGSizeMake(view.frame.width, rect.height + 20)
         }
         

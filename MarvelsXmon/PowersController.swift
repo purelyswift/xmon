@@ -23,9 +23,16 @@ class PowersController: UICollectionViewController, UICollectionViewDelegateFlow
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        
+        collectionView?.alwaysBounceVertical = true
         collectionView?.backgroundColor = UIColor.whiteColor()
+        if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.minimumLineSpacing = 0
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView?.reloadData()
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -41,6 +48,16 @@ class PowersController: UICollectionViewController, UICollectionViewDelegateFlow
         cell.power = powers?[indexPath.item]
         
         return cell
+    }
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let editPowersController = EditPowersController()
+        editPowersController.power = powers?[indexPath.item]
+        navigationController?.pushViewController(editPowersController, animated: true)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(view.frame.width, 80)
     }
     
 }
