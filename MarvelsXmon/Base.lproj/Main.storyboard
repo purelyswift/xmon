@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tJd-LT-pCJ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mutants Controller-->
+        <scene sceneID="1dM-EW-wNr">
+            <objects>
+                <collectionViewController id="g1M-Xs-E2w" customClass="MutantsController" customModule="MarvelsXmon" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="WAd-zX-31p">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hDw-eN-in0">
+                            <size key="itemSize" width="362" height="89"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mutantCellId" id="oKi-v1-dJp" customClass="MutantCell" customModule="MarvelsXmon" customModuleProvider="target">
+                                <rect key="frame" x="119" y="64" width="362" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="362" height="89"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Fe-vc-OK3">
+                                            <rect key="frame" x="0.0" y="0.0" width="362" height="89"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <string key="text">Mutant Name - Human Name
+
+Character Overview</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="3Fe-vc-OK3" firstAttribute="top" secondItem="oKi-v1-dJp" secondAttribute="topMargin" constant="-8" id="1m3-Db-XDP"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="3Fe-vc-OK3" secondAttribute="trailing" constant="-8" id="4RX-NV-DFY"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="3Fe-vc-OK3" secondAttribute="bottom" constant="-8" id="NUX-7E-Eoh"/>
+                                    <constraint firstItem="3Fe-vc-OK3" firstAttribute="leading" secondItem="oKi-v1-dJp" secondAttribute="leadingMargin" constant="-8" id="g86-6t-hFz"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="descriptionTextView" destination="3Fe-vc-OK3" id="840-nG-EEQ"/>
+                                    <segue destination="hbD-mG-j3H" kind="show" id="V57-Oz-Fqt"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="g1M-Xs-E2w" id="U3q-rP-uJK"/>
+                            <outlet property="delegate" destination="g1M-Xs-E2w" id="Aoh-ex-onb"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="zYa-CB-Q7m"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FEG-4D-Hup" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893" y="519"/>
+        </scene>
+        <!--Powers Controller-->
+        <scene sceneID="WcT-Zb-5m8">
+            <objects>
+                <collectionViewController id="hbD-mG-j3H" customClass="PowersController" customModule="MarvelsXmon" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="g4D-2Q-UTP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kSk-U5-agV">
+                            <size key="itemSize" width="328" height="65"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="powerCellId" id="8X7-v0-RhK" customClass="PowerCell" customModule="MarvelsXmon" customModuleProvider="target">
+                                <rect key="frame" x="136" y="64" width="328" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="328" height="65"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjA-uh-S6y">
+                                            <rect key="frame" x="0.0" y="0.0" width="328" height="65"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="zjA-uh-S6y" secondAttribute="trailing" constant="-8" id="3o5-ZR-pla"/>
+                                    <constraint firstItem="zjA-uh-S6y" firstAttribute="leading" secondItem="8X7-v0-RhK" secondAttribute="leadingMargin" constant="-8" id="VRv-bz-GbV"/>
+                                    <constraint firstItem="zjA-uh-S6y" firstAttribute="top" secondItem="8X7-v0-RhK" secondAttribute="topMargin" constant="-8" id="r5e-lw-8ZU"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="zjA-uh-S6y" secondAttribute="bottom" constant="-8" id="xCe-1X-AAt"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="powerLabel" destination="zjA-uh-S6y" id="Kcq-nL-K9z"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="hbD-mG-j3H" id="vpw-5Y-WOH"/>
+                            <outlet property="delegate" destination="hbD-mG-j3H" id="f9o-PT-0hv"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gAt-6Y-DPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1545" y="519"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aXQ-L3-mif">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tJd-LT-pCJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bUe-f9-aqt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="g1M-Xs-E2w" kind="relationship" relationship="rootViewController" id="Xro-jg-OI4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vgW-Qv-Zvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81" y="519"/>
+        </scene>
+    </scenes>
+</document>
